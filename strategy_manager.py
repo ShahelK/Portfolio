@@ -20,14 +20,6 @@ class StrategyManager:
 		self.maximumSharpeRatioStrategy = MaximumSharpeRatioStrategy()
 		self.strategyHelperFunctions = StrategyHelperFunctions()
 
-	def calculate_genetic_algo_portfolio(self, symbols, returns_matrix_percentages):
-		"""
-		Genetic algorithm based portfolio that maximizes sharpe ratio. This is my own implementation
-		"""
-		print("-* Calculating portfolio weights using genetic algorithm...")
-		portfolio_weights_dictionary = self.geneticAlgoStrategy.generate_portfolio(symbols, returns_matrix_percentages)
-		return portfolio_weights_dictionary
-
 	def calculate_eigen_portfolio(self, symbols, covariance_matrix, eigen_portfolio_number):
 		"""
 		2nd Eigen Portfolio

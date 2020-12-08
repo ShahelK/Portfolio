@@ -10,9 +10,7 @@ class MaximumSharpeRatioStrategy:
 		print("Maximum sharpe ratio strategy has been created")
 		
 	def generate_portfolio(self, symbols, covariance_matrix, returns_vector):
-		"""
-		Inspired by: Eigen Portfolio Selection: A Robust Approach to Sharpe Ratio Maximization, https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3070416
-		"""
+		
 		inverse_cov_matrix = np.linalg.pinv(covariance_matrix)
 		ones = np.ones(len(inverse_cov_matrix))
 
